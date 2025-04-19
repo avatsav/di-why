@@ -1,5 +1,8 @@
+import android.databinding.tool.ext.capitalizeUS
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.ksp)
 }
 
 group = "dev.avatsav"
@@ -23,5 +26,13 @@ kotlin {
                 implementation(libs.kotlin.test)
             }
         }
+    }
+}
+val kspTargets = kotlin.targets.names.map { it.capitalizeUS() }
+
+dependencies {
+    for (target in kspTargets) {
+        val targetConfigSuffix = if (target == "Metadata") "CommonMainMetadata" else target
+        add("ksp${targetConfigSuffix}", projects.diWhyKsp)
     }
 }
