@@ -1,4 +1,4 @@
-package coffee
+package dev.avatsav.coffee
 
 class CoffeeMachine(
     private val logger: Logger,

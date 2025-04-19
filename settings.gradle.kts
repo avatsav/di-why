@@ -13,6 +13,8 @@ dependencyResolutionManagement {
     }
 }
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "di-why"
-include(":di-why")
+include(":di-why-runtime")
 include(":coffee-machine")

@@ -1,6 +1,4 @@
 import com.vanniktech.maven.publish.SonatypeHost
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -20,7 +18,6 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-
             }
         }
         val commonTest by getting {

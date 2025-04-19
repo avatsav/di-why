@@ -1,4 +1,4 @@
-package coffee
+package dev.avatsav.coffee
 
 interface Logger {
     fun log(message: String)

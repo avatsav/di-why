@@ -1,4 +1,4 @@
-package coffee
+package dev.avatsav.coffee
 
 interface Heater {
     fun on()
