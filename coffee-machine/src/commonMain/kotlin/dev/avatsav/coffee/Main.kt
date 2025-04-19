@@ -28,9 +28,9 @@ fun createCoffeeMachineFactoryHolderModule(): CoffeeMachine {
     module.bind<Logger, CoffeeMachineLogger>()
     module.bind<Heater, ElectricHeater>()
     module.bind<Pump, Thermosiphon>()
-    module.install { CoffeeMachineLogger() }
-    module.install { ElectricHeater(get()) }
-    module.install { Thermosiphon(get(), get()) }
+    module.installSingleton { CoffeeMachineLogger() }
+    module.installSingleton { ElectricHeater(get()) }
+    module.installSingleton { Thermosiphon(get(), get()) }
     module.install { CoffeeMachine(get(), get(), get()) }
     val objectGraph = ObjectGraph(module)
     return objectGraph.get()

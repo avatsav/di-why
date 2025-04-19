@@ -3,6 +3,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.vanniktech.mavenPublish)
+    alias(libs.plugins.kotlinAtomicfu)
 }
 
 group = "dev.avatsav"

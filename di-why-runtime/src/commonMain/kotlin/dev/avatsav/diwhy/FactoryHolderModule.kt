@@ -19,6 +19,10 @@ inline fun <reified T : Any> FactoryHolderModule.install(
     noinline factory: ObjectGraph.() -> T
 ) = install(T::class, factory)
 
+inline fun <reified T : Any> FactoryHolderModule.installSingleton(
+    noinline factory: ObjectGraph.() -> T
+) = install(T::class, singleton(factory))
+
 inline fun <reified REQUESTED : Any, reified PROVIDED : REQUESTED> FactoryHolderModule.bind() {
     install(REQUESTED::class) { objectGraph ->
         objectGraph[PROVIDED::class]
