@@ -1,5 +1,8 @@
 package dev.avatsav.coffee
 
+import dev.avatsav.diwhy.Inject
+import dev.avatsav.diwhy.Singleton
+
 interface Heater {
     fun on()
     fun off()
@@ -7,7 +10,8 @@ interface Heater {
 }
 
 
-class ElectricHeater(private val logger: Logger) : Heater {
+@Singleton
+class ElectricHeater @Inject constructor(private val logger: Logger) : Heater {
     override var isHot = false
         private set
 

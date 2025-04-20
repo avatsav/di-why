@@ -1,6 +1,11 @@
 package dev.avatsav.coffee
 
-import dev.avatsav.diwhy.*
+import dev.avatsav.diwhy.FactoryHolderModule
+import dev.avatsav.diwhy.ObjectGraph
+import dev.avatsav.diwhy.bind
+import dev.avatsav.diwhy.get
+import dev.avatsav.diwhy.install
+import dev.avatsav.diwhy.installSingleton
 
 fun main() {
     println("---Manual DI---")
@@ -30,7 +35,7 @@ fun createCoffeeMachineFactoryHolderModule(): CoffeeMachine {
     module.bind<Pump, Thermosiphon>()
     module.installSingleton { CoffeeMachineLogger() }
     module.installSingleton { ElectricHeater(get()) }
-    module.installSingleton { Thermosiphon(get(), get()) }
+    module.install { Thermosiphon(get(), get()) }
     module.install { CoffeeMachine(get(), get(), get()) }
     val objectGraph = ObjectGraph(module)
     return objectGraph.get()
