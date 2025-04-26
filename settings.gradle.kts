@@ -15,7 +15,7 @@ dependencyResolutionManagement {
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "di-why"
-include(":di-why-runtime")
-include(":di-why-ksp")
+rootProject.name = "nanite"
+include(":nanite-runtime")
+include(":nanite-ksp")
 include(":coffee-machine")

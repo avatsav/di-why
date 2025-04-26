@@ -13,7 +13,7 @@ java {
 }
 
 dependencies {
-    implementation(projects.diWhyRuntime)
+    implementation(projects.naniteRuntime)
     implementation(libs.ksp)
     implementation(libs.kotlinPoet)
     implementation(libs.kotlinPoet.ksp)

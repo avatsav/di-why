@@ -18,7 +18,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(projects.diWhyRuntime)
+                implementation(projects.naniteRuntime)
             }
         }
         val commonTest by getting {
@@ -33,6 +33,6 @@ val kspTargets = kotlin.targets.names.map { it.capitalizeUS() }
 dependencies {
     for (target in kspTargets) {
         val targetConfigSuffix = if (target == "Metadata") "CommonMainMetadata" else target
-        add("ksp${targetConfigSuffix}", projects.diWhyKsp)
+        add("ksp${targetConfigSuffix}", projects.naniteKsp)
     }
 }
