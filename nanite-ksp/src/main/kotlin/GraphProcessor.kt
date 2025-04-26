@@ -26,10 +26,10 @@ import com.squareup.kotlinpoet.TypeSpec
 import com.squareup.kotlinpoet.ksp.toClassName
 import com.squareup.kotlinpoet.ksp.toKModifier
 import com.squareup.kotlinpoet.ksp.writeTo
-import dev.avatsav.diwhy.Binds
-import dev.avatsav.diwhy.Graph
-import dev.avatsav.diwhy.Inject
-import dev.avatsav.diwhy.Singleton
+import dev.avatsav.nanite.Bind
+import dev.avatsav.nanite.Graph
+import dev.avatsav.nanite.Inject
+import dev.avatsav.nanite.Singleton
 import kotlin.reflect.KClass
 
 class DependencyGraphProcessorProvider : SymbolProcessorProvider {
@@ -145,7 +145,7 @@ class DependencyGraphProcessor(
             return modules
                 .map { it.declaration as KSClassDeclaration }
                 .flatMap { it.annotations }
-                .filter { it isInstance Binds::class }
+                .filter { it isInstance Bind::class }
                 .associate { annotation ->
                     val args = annotation.annotationType.resolve().arguments
                     val requested = args.first().type!!.resolve().declaration

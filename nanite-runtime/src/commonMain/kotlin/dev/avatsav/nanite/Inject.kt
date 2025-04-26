@@ -1,4 +1,4 @@
-package dev.avatsav.diwhy
+package dev.avatsav.nanite
 
 @Target(
     AnnotationTarget.CLASS,

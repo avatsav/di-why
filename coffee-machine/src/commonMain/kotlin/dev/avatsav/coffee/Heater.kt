@@ -1,7 +1,7 @@
 package dev.avatsav.coffee
 
-import dev.avatsav.diwhy.Inject
-import dev.avatsav.diwhy.Singleton
+import dev.avatsav.nanite.Bind
+import dev.avatsav.nanite.Inject
 
 interface Heater {
     fun on()
@@ -10,7 +10,7 @@ interface Heater {
 }
 
 
-@Singleton
+@Bind<Heater>
 class ElectricHeater @Inject constructor(private val logger: Logger) : Heater {
     override var isHot = false
         private set

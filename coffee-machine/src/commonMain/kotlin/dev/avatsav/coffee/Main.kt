@@ -4,6 +4,10 @@ fun main() {
     println("---Manual DI---")
     val coffeeMachine1 = createCoffeeMachineManual()
     coffeeMachine1.brew()
+
+    val graph = GeneratedAppDependencyGraph()
+    val coffeeMachine2 = graph.coffeeMachine
+    coffeeMachine2.brew()
 }
 
 fun createCoffeeMachineManual(): CoffeeMachine {

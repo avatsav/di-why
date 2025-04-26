@@ -1,6 +1,6 @@
 package dev.avatsav.coffee
 
-import dev.avatsav.diwhy.Inject
+import dev.avatsav.nanite.Inject
 
 class CoffeeMachine @Inject constructor(
     private val logger: Logger,

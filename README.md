@@ -11,7 +11,7 @@ Nanite is an experimental dependency injection library for Kotlin, created prima
 code generation techniques with Kotlin Symbol Processing (KSP). This project serves as a learning tool to understand the
 internals of dependency injection frameworks, annotation processing and code generation in the Kotlin ecosystem.
 
-📚 Check out the [documentation](https://avatsav.github.io/di-why) for more details.
+📚 Check out the [documentation](https://avatsav.github.io/nanite) for more details.
 
 ### ✨ Inspiration
 

@@ -1,11 +1,13 @@
 package dev.avatsav.coffee
 
- import dev.avatsav.diwhy.Inject
+import dev.avatsav.nanite.Bind
+import dev.avatsav.nanite.Inject
 
 interface Pump {
     fun pump()
 }
 
+@Bind<Pump>
 class Thermosiphon @Inject constructor(
     private val logger: Logger,
     private val heater: Heater

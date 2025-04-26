@@ -1,13 +1,13 @@
 package dev.avatsav.coffee
 
-import dev.avatsav.diwhy.Inject
-import dev.avatsav.diwhy.Singleton
+import dev.avatsav.nanite.Bind
+import dev.avatsav.nanite.Inject
 
 interface Logger {
     fun log(message: String)
 }
 
-@Singleton
+@Bind<Logger>
 class CoffeeMachineLogger @Inject constructor() : Logger {
     override fun log(message: String) {
         println(message)

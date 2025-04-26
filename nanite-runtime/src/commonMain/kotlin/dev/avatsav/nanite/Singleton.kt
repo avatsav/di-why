@@ -1,7 +1,7 @@
-package dev.avatsav.diwhy
+package dev.avatsav.nanite
 
 @Target(
     AnnotationTarget.CLASS,
     AnnotationTarget.CONSTRUCTOR
 )
-annotation class Singleton()
+annotation class Singleton
