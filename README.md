@@ -1,22 +1,23 @@
-# DI-Why: Kotlin Dependency Injection Library
+# DI-Why: A Kotlin DI Library
 
-[![Experimental](https://img.shields.io/badge/Status-Experimental-8A2BE2.svg)](https://github.com/avatsav/di-why)
+[![Experiment](https://img.shields.io/badge/Status-Experiment-8A2BE2.svg)](https://github.com/avatsav/di-why)
+
+> **Note**: This library is not intended for production use. It was built as an educational exercise to deepen
+> understanding of advanced Kotlin features and code generation.
 
 ## 📝 Overview
 
 DI-Why is an experimental dependency injection library for Kotlin, created primarily for academic purposes to explore
 code generation techniques with Kotlin Symbol Processing (KSP). This project serves as a learning tool to understand the
-internals of dependency injection frameworks and annotation processing in the Kotlin ecosystem.
+internals of dependency injection frameworks, annotation processing and code generation in the Kotlin ecosystem.
 
-> **Note**: This library is not intended for production use. It was built as an educational exercise to deepen
-> understanding of advanced Kotlin features and code generation.
+📚 Check out the [documentation](https://avatsav.github.io/di-why) for more details.
 
-## ✨ Features
+### ✨ Inspiration
 
-- Annotation-based dependency injection
-- Compile-time code generation via KSP
-- Constructor injection support
-- Simple, readable generated code
+This project was inspired by the excellent blog
+post [DIY Your Own Dependency Injection Library](https://blog.p-y.wtf/diy-your-own-dependency-injection-library), which
+demonstrates how to build a simple dependency injection system from scratch.
 
 ## License
 
