@@ -1,4 +1,4 @@
-# DI-Why: A Kotlin DI Library
+# Nanite: A Kotlin DI Library
 
 [![Experiment](https://img.shields.io/badge/Status-Experiment-8A2BE2.svg)](https://github.com/avatsav/di-why)
 
@@ -7,7 +7,7 @@
 
 ## 📝 Overview
 
-DI-Why is an experimental dependency injection library for Kotlin, created primarily for academic purposes to explore
+Nanite is an experimental dependency injection library for Kotlin, created primarily for academic purposes to explore
 code generation techniques with Kotlin Symbol Processing (KSP). This project serves as a learning tool to understand the
 internals of dependency injection frameworks, annotation processing and code generation in the Kotlin ecosystem.
 
