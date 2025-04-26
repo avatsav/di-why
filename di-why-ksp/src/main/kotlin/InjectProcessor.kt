@@ -80,7 +80,7 @@ class InjectProcessor(
         private val objectGraphClassName = ObjectGraph::class.asClassName()
         private val singletonMemberName = MemberName("dev.avatsav.diwhy", "singleton")
         private val getMemberName = MemberName("dev.avatsav.diwhy", "get", true)
-        private const val generatedPackageName = "dev.avatsav.diwhy.generated"
+        private const val generatedPackageName = "dev.a vatsav.diwhy.generated"
     }
 
     inner class InjectConstructorVisitor : KSVisitorVoid() {

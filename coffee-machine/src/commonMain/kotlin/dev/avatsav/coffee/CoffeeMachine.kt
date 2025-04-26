@@ -1,6 +1,8 @@
 package dev.avatsav.coffee
 
-class CoffeeMachine(
+import dev.avatsav.diwhy.Inject
+
+class CoffeeMachine @Inject constructor(
     private val logger: Logger,
     private val heater: Heater,
     private val pump: Pump,
@@ -12,5 +14,4 @@ class CoffeeMachine(
         logger.log("coffee is brewed")
         heater.off()
     }
-
 }
