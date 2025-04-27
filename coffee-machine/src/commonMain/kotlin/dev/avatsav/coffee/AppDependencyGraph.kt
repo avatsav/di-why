@@ -2,6 +2,8 @@ package dev.avatsav.coffee
 
 import dev.avatsav.nanite.Graph
 import dev.avatsav.nanite.internal.Provider
+import dev.avatsav.nanite.internal.provider
+import dev.avatsav.nanite.internal.singletonProvider
 
 @Graph
 interface AppDependencyGraph {
@@ -17,14 +19,14 @@ public class GeneratedAppDependencyGraph : AppDependencyGraph {
     override val coffeeMachine: CoffeeMachine = provideCoffeeMachine()
 
     private val provideHeater: Provider<ElectricHeater>
-        get() = Provider { ElectricHeater(provideLogger()) }
+        get() = singletonProvider { ElectricHeater(provideLogger()) }
     private val provideCoffeeMachine: Provider<CoffeeMachine>
-        get() = Provider { CoffeeMachine(logger = provideLogger(), heater = provideHeater(), pump = providePump()) }
+        get() = provider { CoffeeMachine(logger = provideLogger(), heater = provideHeater(), pump = providePump()) }
 
     private val providePump: Provider<Thermosiphon>
-        get() = Provider { Thermosiphon(provideLogger(), provideHeater()) }
+        get() = provider { Thermosiphon(provideLogger(), provideHeater()) }
 
     private val provideLogger: Provider<CoffeeMachineLogger>
-        get() = Provider { CoffeeMachineLogger() }
+        get() = singletonProvider { CoffeeMachineLogger() }
 
 }
